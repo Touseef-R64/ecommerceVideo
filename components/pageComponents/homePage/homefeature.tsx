@@ -33,7 +33,7 @@ const Homefeature = (feature : featureItype) => {
             <ul className='flex flex-col gap-[10px] my-[20px]  text-secondary-150 text-[20px] font-[500]'>
                         {feature.lists.map((list,idx) => {
                             return(
-                        <li className='flex items-center gap-[10px]'>
+                        <li key={idx} className='flex items-center gap-[10px]'>
                             <span className='text-main-200 '><FontAwesomeIcon icon={faCheck} /></span>
                             <p>{list.split('\b').map((item,idx) => {
                                 return(<span className={`${idx/2 === 1 ? 'text-white' : ''}`} key={idx}>
